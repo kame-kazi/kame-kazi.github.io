@@ -1,0 +1,276 @@
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html {
+  overflow-x: hidden
+}
+
+.orbitron {
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.bruno {
+  font-family: "Bruno Ace SC", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+#navbar {
+  position: fixed;
+  background-color: #EEDF7A;
+  width: 100vw;
+  top: 0;
+  left:0;
+  padding: 3px;
+  z-index: 69
+}
+
+.navlink {
+  color: #343131;
+  text-decoration: none
+}
+
+#welcome-section {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #343131;
+  color: #EEDF7A
+}
+
+h1 {
+  font-size: 4rem
+}
+
+h3 {
+  font-size: 2rem;
+  position: relative;
+  margin-top: 7vh
+}
+
+#projects {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  background-color: #EEDF7A;
+  color: #343131;
+}
+
+.project-grid {
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.project-tile {
+  display: inline-block;
+  margin: 10px;
+}
+
+.polaroid-link {
+  display: block;
+  text-decoration: none;
+}
+
+.polaroid {
+  width: 200px;
+  height: 300px;
+  border: 10px solid #fff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px #D8A25E;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.polaroid:hover {
+  transform: translateY(-5px);
+  box-shadow: 5px 10px 5px #D8A25E;
+}
+
+.polaroid-image {
+  width: auto;
+  height: 70%; 
+  object-fit: cover;
+}
+
+.polaroid-text {
+  padding: 10px;
+  text-align: center;
+  font-size: 1em;
+  font-weight: 700;
+  color: black;
+  background-color: #fff;
+  margin: 0;
+  height: 10%;
+}
+
+.polaroid-desc {
+  padding: 10px;
+  text-align: center;
+  font-size: 1em;
+  color: black;
+  background-color: #fff;
+  margin: 0;
+  height: 20%; 
+}
+
+#contact {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  background-color: #343131;
+  color: #EEDF7A
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: "Orbitron", sans-serif;
+}
+
+#form input,
+#form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 2px solid #343131;
+  border-radius: 8px;
+  background-color: #eedf7a;
+  color: #343131;
+  font-size: 1rem;
+  font-family: "Orbitron", sans-serif;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+#form input::placeholder,
+#form textarea::placeholder {
+  color: #343131;
+  opacity: 0.7;
+}
+
+#form input:focus,
+#form textarea:focus {
+  border-color: #D8A25E;
+  box-shadow: 0 0 5px rgba(252, 110, 81, 0.5);
+}
+
+#form textarea {
+  resize: none;
+}
+
+#form #submit {
+  width: auto;
+  padding: 0.8rem 2rem;
+  background-color: #eedf7a;
+  color: #343131;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+#form #submit:hover {
+  background-color: #D8A25E;
+  transform: scale(1.05);
+}
+
+.social-links {
+  display: grid;
+  font-size: 3rem;
+  grid-template-columns: repeat(1, 1fr);
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  align-items: center;
+  justify-items: center;
+  gap: 2rem;
+  margin-top: 10px
+}
+
+.social-links a {
+  color: #EEDF7A;
+  transition: color 0.3s, transform 0.2s;
+}
+
+.social-links a:hover {
+  transform: scale(1.1);
+  color: #D8A25E
+}
+
+@media (max-width: 768px) {
+  /* Navbar */
+  #navbar {
+    padding: 10px;
+  }
+
+  .navlink {
+    font-size: 1.2rem;
+    padding: 0 10px;
+  }
+
+  /* Welcome Section */
+  #welcome-section h1 {
+    font-size: 2.5rem;
+  }
+
+  #welcome-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .social-links {
+    font-size: 2rem;
+  }
+
+  /* Header Text */
+  h3 {
+    font-size: 1.5rem;
+  }
+}
+
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  #navbar {
+    padding: 5px;
+  }
+
+  #projects {
+    min-height: 110vh
+  }
+
+  .social-links {
+    font-size: 1.5rem;
+  }
+}
